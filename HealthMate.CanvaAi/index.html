@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="hospital.png">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@falconicons/css@1.0.0/falcon.css">
+    <header style="background:#ffffff; padding:15px 30px; display:flex; align-items:center; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+     <img src="./images.png" alt="Logo" style="height:50px; width:auto;">
+     <h1 style="margin-left:15px; font-size:1.5rem; color:#10b981; font-family:sans-serif;">HealthMate</h1>
+    <link rel="stylesheet" href="style.css">
+</header>
+
+    <title>HealthMate - Sehat ka Smart Dost</title>
+
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Signup Slide -->
+<div class="slide" id="signup-slide" style="display:block;">
+  <h2 class="slide-title"><div class="icon">📝</div>Sign Up</h2>
+  <div style="max-width:400px;margin:0 auto;">
+    <input id="signupName" type="text" placeholder="Enter Name" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <input id="signupPass" type="password" placeholder="Enter Password" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <button onclick="signup()" style="width:100%;padding:12px;background:#10b981;color:white;border:none;border-radius:8px;cursor:pointer;">Sign Up</button>
+    <p style="text-align:center;margin-top:15px;">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+</div>
+
+<!-- Login Slide -->
+<div class="slide" id="login-slide" style="display:none;">
+  <h2 class="slide-title"><div class="icon">🔐</div>Login</h2>
+  <div style="max-width:400px;margin:0 auto;">
+    <input id="loginName" type="text" placeholder="Enter Name" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <input id="loginPass" type="password" placeholder="Enter Password" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;">
+    <button onclick="login()" style="width:100%;padding:12px;background:#3b82f6;color:white;border:none;border-radius:8px;cursor:pointer;">Login</button>
+    <p style="text-align:center;margin-top:15px;">New user? <a href="#" onclick="showSignup()">Sign Up</a></p>
+  </div>
+</div>
+
+        <!-- Title Slide -->
+        <div class="slide title-slide" id="slide-0">
+            <div class="main-title">HealthMate</div>
+            <div class="subtitle">Sehat ka Smart Dost</div>
+            <div class="tagline">Your AI-Powered Health Companion</div>
+        </div>
+
+        <!-- Real-Life Story -->
+        <div class="slide" id="slide-1">
+            <h2 class="slide-title">
+                <div class="icon">📋</div>
+                Our Stories  
+            </h2>
+            <p class="slide-subtitle">The struggle with medical reports </p>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-icon">😰</div>
+                    <h3 class="card-title">Complex Medical Jargon</h3>
+                    <p class="card-subtitle">Critical Medical Condition</p>
+                    <p class="card-text">Patients receive reports filled with technical terms they can't understand, leading to confusion and anxiety.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📄</div>
+                    <h3 class="card-title">Scattered Documents</h3>
+                    <p class="card-subtitle">Documentation</p>
+                    <p class="card-text">Medical reports get lost, damaged, or scattered across different hospitals and clinics.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">⏰</div>
+                    <h3 class="card-title">DicLexia</h3>
+                    <p class="card-subtitle">Delayed Understanding</p>
+                    <p class="card-text">Waiting for doctor appointments just to understand what your own health reports mean.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Big Idea -->
+        <div class="slide" id="slide-2">
+            <h2 class="slide-title">
+                <div class="icon">💡</div>
+                Our Vision
+            </h2>
+            <p class="slide-subtitle">AI-powered health companion</p>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">AI-Powered Analysis</h3>
+                    <p class="card-subtitle">Our Model are here for betterment </p>
+                    <p class="card-text">Upload medical reports and get instant explanations in simple English and Roman Urdu.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3 class="card-title">Multipal Languages </h3>
+                    <p class="card-subtitle">Select your mother tounch</p>
+                    <p class="card-text">Explanations in both English and many other Languages
+                     for better understanding.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3 class="card-title">Digital Health Wallet</h3>
+                    <p class="card-subtitle">choose your own mood of payment</p>
+                    <p class="card-text">Store all your health records securely in one place with timeline tracking.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="slide" id="slide-3">
+            <h2 class="slide-title">
+                <div class="icon">⚡</div>
+                Tech Stack | Technology Stack
+            </h2>
+            <p class="slide-subtitle">Modern technologies powering HealthMate</p>
+            
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <span>⚛️</span> React/Next.js
+                </div>
+                <div class="tech-item">
+                    <span>🟢</span> Node.js
+                </div>
+                <div class="tech-item">
+                    <span>🍃</span> MongoDB Atlas
+                </div>
+                <div class="tech-item">
+                    <span>🤖</span> Gemini AI
+                </div>
+                <div class="tech-item">
+                    <span>🔐</span> JWT Auth
+                </div>
+                <div class="tech-item">
+                    <span>☁️</span> Cloud Storage
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3 class="card-title">Frontend</h3>
+                    <p class="card-text">React/Next.js for responsive, fast user interface with server-side rendering.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3 class="card-title">Backend</h3>
+                    <p class="card-text">Node.js with Express for robust API development and real-time processing.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🗄️</div>
+                    <h3 class="card-title">Database</h3>
+                    <p class="card-text">MongoDB Atlas for scalable, secure cloud database with automatic backups.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step-by-Step Journey -->
+        <div class="slide" id="slide-4">
+            <h2 class="slide-title">
+                <div class="icon">🚀</div>
+            Our Journey | Towards Betterment 
+            </h2>
+            <p class="slide-subtitle">From zero to hero </p>
+            
+            <div class="journey-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4>Problem Identification | Reach root</h4>
+                        <p>Researched healthcare challenges and user pain points in Pakistan</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4>Solution Design | We design the future</h4>
+                        <p>Designed AI-powered bilingual health companion architecture</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h4>BIOS Integration | Quantum</h4>
+                        <p>Integrated Gemini AI for medical report analysis and explanation</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h4>UI/UX Development | User Interface</h4>
+                        <p>Built responsive, user-friendly interface with bilingual support</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h4>Testing & Deployment | Our Conculsion</h4>
+                        <p>Comprehensive testing and cloud deployment for scalability</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gemini Integration -->
+        <div class="slide" id="slide-5">
+            <h2 class="slide-title">
+                <div class="icon">🤖</div>
+                 AI Integration | Uses of BIOS
+            </h2>
+            <p class="slide-subtitle">How AI reads and explains reports | Check this!</p>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-icon">📤</div>
+                    <h3 class="card-title">Upload & Parse</h3>
+                    <p class="card-subtitle">Upload aur Get</p>
+                    <p class="card-text">Users upload PDF/image reports. AI extracts and processes medical data using OCR and NLP.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3 class="card-title">AI Analysis</h3>
+                    <p class="card-subtitle">Cost Effective</p>
+                    <p class="card-text">Gemini AI analyzes medical terminology, lab values, and provides contextual understanding.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3 class="card-title">Bilingual Explanation</h3>
+                    <p class="card-subtitle">Multipal Languages</p>
+                    <p class="card-text">Generates simple explanations in English and Roman Urdu with health recommendations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture Diagram -->
+        <div class="slide" id="slide-6">
+            <h2 class="slide-title">
+                <div class="icon">🏗️</div>
+                System Architecture | Our Models
+            </h2>
+            <p class="slide-subtitle">How everything connects | Our Networking</p>
+            
+            <div class="architecture-diagram">
+                <div class="arch-flow">
+                    <div class="arch-box">
+                        <div style="font-size: 24px; margin-bottom: 10px;">📱</div>
+                        <strong>Frontend</strong>
+                        <br>React/Next.js
+                    </div>
+                    
+                    <div class="arch-arrow">→</div>
+                    
+                    <div class="arch-box">
+                        <div style="font-size: 24px; margin-bottom: 10px;">⚙️</div>
+                        <strong>Backend</strong>
+                        <br>Node.js API
+                    </div>
+                    
+                    <div class="arch-arrow">→</div>
+                    
+                    <div class="arch-box">
+                        <div style="font-size: 24px; margin-bottom: 10px;">🤖</div>
+                        <strong>Gemini AI</strong>
+                        <br>Analysis Engine
+                    </div>
+                    
+                    <div class="arch-arrow">→</div>
+                    
+                    <div class="arch-box">
+                        <div style="font-size: 24px; margin-bottom: 10px;">🗄️</div>
+                        <strong>MongoDB</strong>
+                        <br>Data Storage
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Pages -->
+        <div class="slide" id="slide-7">
+            <h2 class="slide-title">
+                <div class="icon">📱</div>
+                User Interface | UI
+            </h2>
+            <p class="slide-subtitle">App screens and features | Now in Mobile app</p>
+            
+            <div class="ui-mockups">
+                <div class="mockup">
+                    <h4>🔐 Login Page</h4>
+                    <p>Secure authentication</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">Our Security</p>
+                </div>
+                
+                <div class="mockup">
+                    <h4>📊 Dashboard</h4>
+                    <p>Health overview</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">All in One</p>
+                </div>
+                
+                <div class="mockup">
+                    <h4>📤 Upload Report</h4>
+                    <p>Easy file upload</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">Upload and Get</p>
+                </div>
+                
+                <div class="mockup">
+                    <h4>💓 Add Vitals</h4>
+                    <p>Track vital signs</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">Biometry Authentication</p>
+                </div>
+                
+                <div class="mockup">
+                    <h4>📅 Timeline View</h4>
+                    <p>Health history</p>
+                    <p style="font-size: 0.9em; opacity: 0.8;">Your Reports</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security & Privacy -->
+        <div class="slide" id="slide-8">
+            <h2 class="slide-title">
+                <div class="icon">🔒</div>
+                Security & Privacy | Our Terms
+            </h2>
+            <p class="slide-subtitle">Your health data is safe | End-to-end encryption</p>
+            
+            <div class="security-features">
+                <div class="security-item">
+                    <div style="font-size: 32px; margin-bottom: 15px;">🔐</div>
+                    <h4>JWT Authentication</h4>
+                    <p>Secure login tokens</p>
+                </div>
+                
+                <div class="security-item">
+                    <div style="font-size: 32px; margin-bottom: 15px;">🔒</div>
+                    <h4>Data Encryption</h4>
+                    <p>End-to-end encryption</p>
+                </div>
+                
+                <div class="security-item">
+                    <div style="font-size: 32px; margin-bottom: 15px;">☁️</div>
+                    <h4>Secure Cloud Storage</h4>
+                    <p>MongoDB Atlas security</p>
+                </div>
+                
+                <div class="security-item">
+                    <div style="font-size: 32px; margin-bottom: 15px;">👤</div>
+                    <h4>Privacy Controls</h4>
+                    <p>User data ownership</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Words -->
+        <div class="slide" id="slide-9">
+            <h2 class="slide-title">
+                <div class="icon">⚠️</div>
+                Important Disclaimer
+            </h2>
+            
+            <div class="final-message">
+                <h3>🩺 AI is for Understanding, Not Medical Advice</h3>
+                <h4 style="color: #dc2626; margin-bottom: 20px;">AI can make mistake check personal and important info</h4>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    HealthMate helps you understand your medical reports better, but it's not a replacement for professional medical advice. 
+                    Always consult with qualified healthcare providers for medical decisions.
+                </p>
+                <p style="font-size: 1rem; margin-top: 15px; opacity: 0.8;">
+                    HealthMate is help to understand your reports in betterway, but it is not consulted by any professional.
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <h3 style="color: #10b981; font-size: 2rem;">Thank You! | For Reaching Us!</h3>
+                <p style="font-size: 1.2rem; color: #6b7280;">
+                    HealthMate - Your AI-Powered Health Companion<br>
+                    <em>Sehat ka Smart Dost</em>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">‹</button>
+        <button class="nav-btn" onclick="nextSlide()">›</button>
+    </div>
+
+    <script>
+        
+function showSignup() {
+  document.getElementById("signup-slide").style.display = "block";
+  document.getElementById("login-slide").style.display = "none";
+}
+
+function showLogin() {
+  document.getElementById("signup-slide").style.display = "none";
+  document.getElementById("login-slide").style.display = "block";
+}
+
+function signup() {
+  var name = document.getElementById("signupName").value;
+  var pass = document.getElementById("signupPass").value;
+
+  if (!name || !pass) return alert("Please fill all fields!");
+
+  localStorage.setItem("userName", name);
+  localStorage.setItem("userPass", pass);
+
+  alert("Signup successful! Please login now.");
+  showLogin();
+}
+
+function login() {
+  var name = document.getElementById("loginName").value;
+  var pass = document.getElementById("loginPass").value;
+
+  var savedName = localStorage.getItem("userName");
+  var savedPass = localStorage.getItem("userPass");
+
+  if (name === savedName && pass === savedPass) {
+    alert("Login successful!");
+    document.getElementById("signup-slide").style.display = "none";
+    document.getElementById("login-slide").style.display = "none";
+    showSlide(0); // Start presentation
+  } else {
+    alert("Invalid details!");
+  }
+}
+</script>
+
+        <!-- let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n >= totalSlides) currentSlide = 0;
+            if (n < 0) currentSlide = totalSlides - 1;
+            
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[currentSlide].style.display = 'block';
+            
+            // Smooth scroll to top of current slide
+            slides[currentSlide].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousSlide();
+            }
+        });
+
+        // Initialize presentation
+        showSlide(0);
+
+        // Auto-advance slides (optional)
+        // setInterval(nextSlide, 10000); // Uncomment for auto-advance every 10 seconds -->
+    
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'990a585ee4e9c914',t:'MTc2MDgxNDcyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
